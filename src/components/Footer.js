@@ -12,7 +12,7 @@ class Footer extends Component {
 }
 
 const mapStateToProps = state => ({
-    visibility: state.toggle.toggle,
+    visibility: state.progressToggle.toggle,
 });
 
 export default connect(mapStateToProps, null)(Footer);

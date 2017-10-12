@@ -1,16 +1,13 @@
+import {
+    SELECT,
+    DESELECT,
+} from './types';
 
-withSpouse_Age;
-withSpouse_LOE;
-withSpouse_OLP;
-withSpouse_WORK;
+export const select = (points) => ({
+    type: 'SELECT',
+    points,
+});
 
-withoutSpouseAge;
-withoutSpouse_LOE;
-withoutSpouse_OLP;
-withoutSpouse_WORK;
-
-spouse_LOE;
-spouse_OLP;
-spouse_WORK;
-
-additional;
+export const deselect = () => ({
+    type: 'DESELECT',
+});

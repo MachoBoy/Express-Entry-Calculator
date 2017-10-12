@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Segment, Table } from 'semantic-ui-react';
+import { SubspaceProvider } from 'react-redux-subspace';
 import TableForm from '../components/TableForm';
 import { 
     educationHeader_1,
@@ -16,7 +17,7 @@ class PartC extends Component {
     render() {
         return (
             <div className="partContainer" style={styles.container} >
-                <Segment>
+                <Segment inverted color="orange">
                     <h1> C. Skill Transferability factors </h1>
                     
                     <Table 
@@ -28,7 +29,7 @@ class PartC extends Component {
                     >
                         <Table.Header>
                             <Table.Row>
-                                <Table.HeaderCell textAlign="center"> Education </Table.HeaderCell>
+                                <Table.HeaderCell> Education </Table.HeaderCell>
                                 <Table.HeaderCell textAlign="center"> Points per factor </Table.HeaderCell>
                             </Table.Row>
                         </Table.Header>
@@ -55,7 +56,7 @@ class PartC extends Component {
                         <Table.Header>
                             <Table.Row>
                                 <Table.HeaderCell> Foreign work experience </Table.HeaderCell>
-                                <Table.HeaderCell> Points per factor </Table.HeaderCell>
+                                <Table.HeaderCell textAlign="center"> Points per factor </Table.HeaderCell>
                             </Table.Row>
                         </Table.Header>
 
@@ -81,7 +82,7 @@ class PartC extends Component {
                         <Table.Header>
                             <Table.Row>
                                 <Table.HeaderCell> Certificate of qualification (for people in trade occupations) </Table.HeaderCell>
-                                <Table.HeaderCell> Points per factor </Table.HeaderCell>
+                                <Table.HeaderCell textAlign="center"> Points per factor </Table.HeaderCell>
                             </Table.Row>
                         </Table.Header>
 
@@ -94,23 +95,52 @@ class PartC extends Component {
                     </Table>
                 </Segment>
 
-                <Segment>
+                
+                <Segment inverted color="black">
                     <h1>Education</h1>
-                    <TableForm headers={educationHeader_1} rows={educationData} />
+                    <SubspaceProvider mapState={state => state.skillEducation1} namespace="skillEducation1">
+                        <TableForm 
+                            headers={educationHeader_1} 
+                            rows={educationData} 
+                        />
+                    </SubspaceProvider>
                 </Segment>
-                <Segment>
-                    <TableForm headers={educationHeader_2} rows={educationData} />
+                <Segment inverted color="black">
+                    <SubspaceProvider mapState={state => state.skillEducation2} namespace="skillEducation2">
+                        <TableForm 
+                            headers={educationHeader_2} 
+                            rows={educationData} 
+                        />
+                    </SubspaceProvider>
                 </Segment>
 
-                <Segment>
+                
+                <Segment inverted color="black">
                     <h1>Foreign work experience – With good official language proficiency</h1>
-                    <TableForm headers={fweHeader_1} rows={fweData} />
+                    <SubspaceProvider mapState={state => state.skillFwe1} namespace="skillFwe1">
+                        <TableForm 
+                            headers={fweHeader_1} 
+                            rows={fweData} 
+                        />
+                    </SubspaceProvider>
                 </Segment>
 
-                <Segment>
+                <Segment inverted color="black">
                     <h1>Foreign work experience – With Canadian work experience</h1>
-                    <TableForm headers={fweHeader_2} rows={fweData} />
-                    <TableForm headers={coqHeader} rows={coqData} />
+                    <SubspaceProvider mapState={state => state.skillFwe2} namespace="skillFwe2">
+                        <TableForm 
+                            headers={fweHeader_2} 
+                            rows={fweData} 
+                        />
+                    </SubspaceProvider>
+                </Segment>
+                <Segment inverted color="black">
+                    <SubspaceProvider mapState={state => state.skillCertificate} namespace="skillCertificate">
+                        <TableForm 
+                            headers={coqHeader} 
+                            rows={coqData} 
+                        />
+                    </SubspaceProvider>
                 </Segment>
             </div>
         );
@@ -119,8 +149,12 @@ class PartC extends Component {
 
 const styles = {
     container: {
-        padding: '30px',
+        paddingTop: '30px',
+        paddingBottom: '90px',
+        paddingRight: '60px',
+        paddingLeft: '60px',
         backgroundColor: '#F9F9F9',
+        marginLeft: '270px',
     },
 };
 

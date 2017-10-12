@@ -2,8 +2,8 @@ import React from 'react';
 import { Segment } from 'semantic-ui-react';
 
 const About = () => (
-    <div>
-        <Segment textAlign="center">
+    <div className="About" style={styles.container}>
+        <Segment textAlign="center" >
             <h1>Express Entry</h1>
             <p>Express Entry is an immigration system which selects skilled workers to Canada under Rederal Economic programs.</p>
             <p>Applicants submit an online profile to the Express Entry Pool.</p>
@@ -13,6 +13,17 @@ const About = () => (
         </Segment>
     </div>
 );
+
+const styles = {
+    container: {
+        paddingTop: '30px',
+        paddingBottom: '90px',
+        paddingRight: '60px',
+        paddingLeft: '60px',
+        backgroundColor: '#F9F9F9',
+        marginLeft: '270px',
+    },
+};
 
 
 export default About;

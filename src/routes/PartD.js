@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Segment, Table } from 'semantic-ui-react';
+import { SubspaceProvider } from 'react-redux-subspace';
 import TableForm from '../components/TableForm';
 
 
@@ -23,7 +24,7 @@ class PartD extends Component {
 
         return (
             <div className="partContainer" style={styles.container} >
-                <Segment>
+                <Segment inverted color="orange">
                     <h1> D. Additional points </h1>
                     
                     <Table 
@@ -66,8 +67,10 @@ class PartD extends Component {
                     </Table>
                 </Segment>
 
-                <Segment>
+                <Segment inverted color="black">
+                <SubspaceProvider mapState={state => state.additional} namespace="additional">
                     <TableForm headers={additionalHeader} rows={additionalData} />
+                </SubspaceProvider>
                 </Segment>
             </div>
         );
@@ -76,8 +79,12 @@ class PartD extends Component {
 
 const styles = {
     container: {
-        padding: '30px',
+        paddingTop: '30px',
+        paddingBottom: '90px',
+        paddingRight: '60px',
+        paddingLeft: '60px',
         backgroundColor: '#F9F9F9',
+        marginLeft: '270px',
     },
 };
 

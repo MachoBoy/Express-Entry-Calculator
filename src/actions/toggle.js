@@ -2,5 +2,4 @@ import {
     TOGGLE,
 } from './types';
 
-export const toggle = () => ({ type: TOGGLE });
-
+export const toggle = () => ({ type: 'TOGGLE' });

@@ -40,5 +40,6 @@ module.exports = {
         "quotes": 0,
         "import/prefer-default-export": 0,
         "camelcase": 0,
+        "react/prop-types": 0,
     }
 };
