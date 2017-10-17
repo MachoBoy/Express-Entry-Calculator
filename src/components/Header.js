@@ -134,9 +134,9 @@ class Header extends Component {
                             />
                         }
                     </div>
-                    <div style={styles.resetContainer}>
+                    {/* <div style={styles.resetContainer}>
                         <Checkbox toggle onClick={this.props.deSelectAll} />
-                    </div>
+                    </div> */}
                 </Menu>
             </div>
         );
@@ -186,7 +186,7 @@ const styles = {
 };
 
 const mapDispatchToProps = dispatch => ({
-    deSelectAll: () => dispatch({ type: 'DESELECT' }),
+    // deSelectAll: () => dispatch({ type: 'DESELECT' }),
     pointToggle: () => dispatch({ type: 'TOGGLE_progress' }),
     withSpouseSum: (total) => dispatch(withSpouseSum(total)),
     withoutSpouseSum: (total) => dispatch(withoutSpouseSum(total)),
