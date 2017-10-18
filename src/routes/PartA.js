@@ -10,6 +10,7 @@ class PartA extends Component {
     constructor(props){
         super(props);
         this.state = { activeIndex: 0 }
+        this.handleTabChange = this.handleTabChange.bind(this);
     }
 
     handleTabChange = (e, {activeIndex}) => {
