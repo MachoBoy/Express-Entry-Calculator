@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Icon, Menu, Checkbox } from 'semantic-ui-react';
 import StatusWindow from './StatusWindow';
 import { toggle, withSpouseSum, withoutSpouseSum } from '../actions';
-import Points from './Points';
+import Points from './common/Points';
 
 const shortid = require('shortid');
 

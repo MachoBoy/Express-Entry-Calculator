@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Header, Message, Icon } from 'semantic-ui-react';
+import { Segment, Header, Message, Icon, Table } from 'semantic-ui-react';
 
 const About = () => (
     <div className="About" style={styles.container}>
@@ -15,8 +15,7 @@ const About = () => (
             <Segment color="orange">
                 <Header size="large">Express Entry Calculator</Header>
                 <Message warning><Icon name="warning circle" size="large" />This tool is intended solely for general guidance and reference purposes.</Message>
-                <p>This tool will help you calculate your Comprehensive Ranking System (CRS) score based on the answers you provide </p>
-                <p>The CRS is a points-based system </p>
+                <p>This tool will help you calculate your Comprehensive Ranking System (CRS) score based on the answers you provide. The CRS is a points-based system. </p>
                 <p>There are 4 parts of section</p>
                 <ul>
                     <li>Skills and experience factors</li>
@@ -31,6 +30,40 @@ const About = () => (
                         <li>strong French language skills</li>
                     </ul>
                 </ul>
+                <p> Core Points + Additional Points = Your Total Score</p>
+                <Table 
+                    className="summaryTable" 
+                    size="large"
+                    padded
+                    striped
+                    celled
+                    verticalAlign={'middle'} 
+                >
+                <Table.Header >
+                    <Table.Row >
+                        <Table.HeaderCell textAlign="center"> Single candidates </Table.HeaderCell>
+                        <Table.HeaderCell textAlign="center"> With a spouse or common-law partner </Table.HeaderCell>
+                    </Table.Row>
+                </Table.Header>
+                <Table.Body>
+                    <Table.Row>
+                        <Table.Cell textAlign="center"> 1. Skills and experience factors (maximum 500) </Table.Cell>
+                        <Table.Cell textAlign="center"> 1. Skills and experience factors (maximum 460) </Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell textAlign="center"> N/A </Table.Cell>
+                        <Table.Cell textAlign="center"> 2. Spouse or common-law partner factors (maximum 40) </Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell textAlign="center"> 3. Skill transferability factors (maximum 100) </Table.Cell>
+                        <Table.Cell textAlign="center"> 3. Skill transferability factors (maximum 100) </Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell textAlign="center"> 4. points (maximum 600)  </Table.Cell>
+                        <Table.Cell textAlign="center"> 4. points (maximum 600) </Table.Cell>
+                    </Table.Row>
+                </Table.Body>
+            </Table>
             </Segment>
             <Segment color="black" inverted textAlign="right">
                 Developed by Machoboy 2017 &nbsp;&nbsp;
