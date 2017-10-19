@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Icon, Menu, Checkbox } from 'semantic-ui-react';
+import { Icon, Menu, Button } from 'semantic-ui-react';
 import StatusWindow from './StatusWindow';
 import { toggle, withSpouseSum, withoutSpouseSum } from '../actions';
 import Points from './common/Points';
@@ -134,9 +134,9 @@ class Header extends Component {
                             />
                         }
                     </div>
-                    {/* <div style={styles.resetContainer}>
-                        <Checkbox toggle onClick={this.props.deSelectAll} />
-                    </div> */}
+                    <div style={styles.resetContainer}>
+                        <Button content="Reset" basic color="orange" onClick={this.props.deSelectAll} />
+                    </div>
                 </Menu>
             </div>
         );
@@ -177,10 +177,10 @@ const mapStateToProps = state => ({
 const styles = {
     pointContainer: {
         marginTop: '20px',
-        marginLeft: '90px',
+        marginLeft: '95px',
     },
     resetContainer: {
-        marginTop: '20px',
+        marginTop: '50px',
         marginLeft: '90px',
     },
 };
