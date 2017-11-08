@@ -1,3 +1,7 @@
+# Refactor required #
+* refactor front-end
+* set up backend server
+
 # Express-Entry-Calculator
 Comprehensive Ranking System (CRS) Criteria – Express Entry
 
