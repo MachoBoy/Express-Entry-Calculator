@@ -11,5 +11,5 @@ Comprehensive Ranking System (CRS) Criteria – Express Entry
 * react-redux-subspace
 * semantic-ui-react
 * shortid
-![Imgur Image](https://i.imgur.com/1ZQ8rcS.gifv)
-Demo: https://sleepy-wildwood-44653.herokuapp.com/
+* ![Imgur Image](https://i.imgur.com/1ZQ8rcS.gif)
+* Demo: https://sleepy-wildwood-44653.herokuapp.com/
