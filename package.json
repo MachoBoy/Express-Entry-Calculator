@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server --hot"
+    "start": "node server/index.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -35,6 +35,7 @@
     "react-redux": "^5.0.6",
     "react-redux-subspace": "^2.0.6",
     "react-router-dom": "^4.2.2",
+    "react-scripts": "^1.0.17",
     "redux": "^3.7.2",
     "redux-subspace": "^2.0.6",
     "semantic-ui-react": "^0.72.0",
